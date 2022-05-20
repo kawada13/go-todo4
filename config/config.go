@@ -21,6 +21,7 @@ func init() {
 }
 
 func LoadConfig() {
+	// Loadするタイミングで、logファイルが存在しなければ、作成する
 	cfg, err := ini.Load("config.ini")
 
 	if err != nil {
