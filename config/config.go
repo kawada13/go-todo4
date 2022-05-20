@@ -15,6 +15,11 @@ type ConfigList struct {
 
 var Config ConfigList
 
+// main関数が呼ばれる前に実行される
+func init() {
+	LoadConfig()
+}
+
 func LoadConfig() {
 	cfg, err := ini.Load("config.ini")
 
